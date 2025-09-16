@@ -85,4 +85,33 @@ function filtrarPares(array) {
   }
   return pares;
 }
+//aula do dia 1609
+const users = [
+ {
+  "name": "Fernanda", "age": 12,
+  "contact": "55 31 998319375", "city": "Salvador"
+
+},
+{
+
+
+  "name": "Dora", "age": 17,
+  "contact": "55 31 998315856", "city": "Pernambuco"
+},
+
+
+{ 
+  "name": "Dora", "age": 25,
+  "contact": "55 31 99831554", "city": "Salvador"
+},
+
+]
+
+const contagem = users.reduce((acumulador, user) =>{
+ //acumulador[user.city] = "salvador" + 1;
+acumulador[user.city] = (acumulador[user.city] || 0) + 1;
+ return acumulador;
+}, {});
+console.log(contagem); 
+
 
