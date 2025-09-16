@@ -1,11 +1,11 @@
-// 1. Variáveis e tipos
+//variáveis e tipos
 let minhaString = "Olá, mundo!";
 const meuNumero = 42;
 
 console.log(typeof minhaString); 
 console.log(typeof meuNumero);   
 
-// 2. Entrada e decisão simples
+//entrada e decisão simples
 function verificarNumero(num) {
   if (num > 0) {
     return "Positivo";
@@ -16,7 +16,7 @@ function verificarNumero(num) {
   }
 }
 
-// 3. Par ou ímpar
+//par ou ímpar
 function parOuImpar(num) {
   if (num % 2 === 0) {
     return "Par";
@@ -25,12 +25,12 @@ function parOuImpar(num) {
   }
 }
 
-// 4. Laço for básico
+//laço for básico
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
-// 5. Soma com for
+//soma com for
 function somarAteN(n) {
   let soma = 0;
   for (let i = 1; i <= n; i++) {
@@ -39,21 +39,21 @@ function somarAteN(n) {
   return soma;
 }
 
-// 6. Laço while
+//laço while
 let contador = 10;
 while (contador >= 1) {
   console.log(contador);
   contador--;
 }
 
-// 7. Tabuada
+//tabuada
 function tabuada(numero) {
   for (let i = 1; i <= 10; i++) {
     console.log(`${numero} x ${i} = ${numero * i}`);
   }
 }
 
-// 8. Decisão com switch
+//decisão com switch
 function verificarDia(dia) {
   switch (dia) {
     case "segunda":
@@ -70,12 +70,12 @@ function verificarDia(dia) {
   }
 }
 
-// 9. Função com múltiplos parâmetros
+//função com múltiplos parâmetros
 function apresentarPessoa(nome, idade, cidade) {
   return `Meu nome é ${nome}, tenho ${idade} anos e moro em ${cidade}.`;
 }
 
-// 10. Combinação de estruturas
+//combinação de estruturas
 function filtrarPares(array) {
   let pares = [];
   for (let i = 0; i < array.length; i++) {
@@ -113,5 +113,23 @@ acumulador[user.city] = (acumulador[user.city] || 0) + 1;
  return acumulador;
 }, {});
 console.log(contagem); 
+
+//média das idades
+
+const somaDasIdades = users.reduce((acumulador, user, index, array) =>{
+ acumulador[user.age.city] = (acumulador[user.age.city] || 0);
+acumulador += user.age;
+ if(index === array.length-1){
+  return acumulador/array.length
+ }
+ return acumulador;
+}, 0);
+console.log(somaDasIdades); 
+
+const mediaDasIdades = somaDasIdades = somaDasIdades / user.length;
+
+const numbers = [ 1 , 2 , 3 , 4]
+const pares = numbers.filter(n => n % 2 === 0)
+console.log(pares);
 
 
