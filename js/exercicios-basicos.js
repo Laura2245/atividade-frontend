@@ -2,8 +2,8 @@
 let minhaString = "Olá, mundo!";
 const meuNumero = 42;
 
-console.log(typeof minhaString); // string
-console.log(typeof meuNumero);   // number
+console.log(typeof minhaString); 
+console.log(typeof meuNumero);   
 
 // 2. Entrada e decisão simples
 function verificarNumero(num) {
