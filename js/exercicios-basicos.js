@@ -133,3 +133,48 @@ const pares = numbers.filter(n => n % 2 === 0)
 console.log(pares);
 
 
+//GET
+
+async function buscarUsuarios(address) {
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${address}`)
+    if (!res.ok) {
+      throw new Error(`Erro HTTP: ${res.status}`);
+    }
+
+    const dados = await res.json();
+    console.log("Endereço:", dados.address)
+    //console.log(dados)
+  } catch (erro) {
+    console.error("Erro ao buscar usuarios:", e.message)
+
+  }
+
+}
+buscarUsuarios(4);
+buscarUsuarios(5);
+
+
+//stringify: obj js -> string json
+
+const usuario = {    //obj js
+  id:1,
+  nome: "Maria",
+  ativo:true
+
+}
+
+const jsonString = JSON.stringify(usuario, 2);
+console.log(jsonString);
+
+const jsonRecebido = `{"id":1,"nome":"Maria","ativo":true}` 
+
+try{
+  const dados = JSON.parse(jsonRecebido)
+  console.log(dados.nome)
+  console.log(dados.ativo)
+}catch(e){
+  console.error("Erro ao processar json:", e.message)
+}
+
+
